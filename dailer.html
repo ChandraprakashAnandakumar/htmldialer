@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dialer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .dialer {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .dialer input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .dialer button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .dialer button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialer">
+        <h2>Dialer</h2>
+        <input type="tel" id="phoneNumber" placeholder="Enter phone number">
+        <button onclick="dialNumber()">Dial</button>
+    </div>
+
+    <script>
+        function dialNumber() {
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            if (phoneNumber) {
+                alert(`Dialing ${phoneNumber}`);
+            } else {
+                alert('Please enter a phone number.');
+            }
+        }
+    </script>
+</body>
+</html>
